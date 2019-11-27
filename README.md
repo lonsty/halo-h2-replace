@@ -17,7 +17,7 @@
 
 #### 1. 安装依赖
 
-```
+```sh
 git glone https://github.com/lonsty/halo-h2-replace.git
 cd halo-h2-replace/
 pip3 install --user -r requirements.txt 
@@ -25,7 +25,7 @@ pip3 install --user -r requirements.txt
 
 #### 2. 一键替换
 
-```
+```sh
 python3 h2_replace.py -o http://lonsty.me -n http://cn.lonsty.me --url=/home/allen/workspace/git/halo-h2-replace/halo
 ```
 
@@ -51,4 +51,13 @@ Options:
   -u, --user TEXT     H2 database username.  [default: admin]
   -p, --passwd TEXT   H2 database password.  [default: 123456]
   --help              Show this message and exit.
+```
+
+## 定时同步数据
+
+```sh
+$ crontab -e
+
+11 0,5,13,17 * * * /usr/bin/zsh -c /home/ubuntu/workspace/halo-h2-replace/scripts/sync_halo_data.sh >> /home/ubuntu/workspace/halo-h2-replace/logs/cron.log
+37 0 1 * * tail -1000 /home/ubuntu/workspace/halo-h2-replace/logs/cron.log > /home/ubuntu/workspace/halo-h2-replace/logs/cron.log
 ```
