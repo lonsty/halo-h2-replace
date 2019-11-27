@@ -17,16 +17,22 @@
 
 #### 1. 安装依赖
 
+安装JDK8
 ```sh
-git glone https://github.com/lonsty/halo-h2-replace.git
-cd halo-h2-replace/
-pip3 install --user -r requirements.txt 
+$ sudo apt install openjdk-8-jdk
+```
+
+克隆并安装Python包
+```sh
+$ git glone https://github.com/lonsty/halo-h2-replace.git
+$ cd halo-h2-replace/
+$ pip3 install --user -r requirements.txt 
 ```
 
 #### 2. 一键替换
 
 ```sh
-python3 h2_replace.py -o http://lonsty.me -n http://cn.lonsty.me --url=/home/allen/workspace/git/halo-h2-replace/halo
+$ python3 h2_replace.py -o http://lonsty.me -n http://cn.lonsty.me --url=/home/allen/workspace/git/halo-h2-replace/halo
 ```
 
 其中：
