@@ -5,12 +5,12 @@ printf "\nReplacing domain name ... "
 docker stop halo-blog
 python3 /home/ubuntu/workspace/halo-h2-replace/h2_replace.py \
 	-o http://lonsty.me \
-	-n http://cn.lonsty.me \
+	-n http://blog.lonsty.me \
 	--url /home/ubuntu/.halo/db/halo \
 	--h2jar /home/ubuntu/workspace/halo-h2-replace/h2.jar
 python3 /home/ubuntu/workspace/halo-h2-replace/h2_replace.py \
 	-o http://hk.lonsty.me \
-	-n http://cn.lonsty.me \
+	-n http://blog.lonsty.me \
 	--url /home/ubuntu/.halo/db/halo \
 	--h2jar /home/ubuntu/workspace/halo-h2-replace/h2.jar
 
